@@ -6,9 +6,10 @@
     "\\AppPrueba\\Models",
     "\\AppPrueba\\Models\\DBInventario",
     "\\AppPrueba\\Views",
-    "\\AppPrueba\\Views\\Carpeta nueva prubea",
+    "\\AppPrueba\\Views\\Home",
+    "\\AppPrueba\\Views\\Shared",
     "\\AppPrueba\\wwwroot"
   ],
-  "SelectedNode": "\\AppPrueba\\Views\\Carpeta nueva prubea\\dsfsdfs",
+  "SelectedNode": "\\AppPrueba.sln",
   "PreviewInSolutionExplorer": false
 }

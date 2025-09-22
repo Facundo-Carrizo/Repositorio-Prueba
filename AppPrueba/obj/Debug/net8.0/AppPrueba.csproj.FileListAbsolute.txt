@@ -169,3 +169,4 @@ C:\Users\usrcoprotab\source\repos\AppPrueba\AppPrueba\obj\Debug\net8.0\AppPrueba
 C:\Users\usrcoprotab\source\repos\AppPrueba\AppPrueba\obj\Debug\net8.0\AppPrueba.genruntimeconfig.cache
 C:\Users\usrcoprotab\source\repos\AppPrueba\AppPrueba\obj\Debug\net8.0\ref\AppPrueba.dll
 C:\Users\usrcoprotab\source\repos\AppPrueba\AppPrueba\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\usrcoprotab\source\repos\AppPrueba\AppPrueba\obj\Debug\net8.0\AppPrueba.sourcelink.json
