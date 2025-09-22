@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AppPrueba",
+    "\\AppPrueba\\Controllers",
+    "\\AppPrueba\\Models",
+    "\\AppPrueba\\Models\\DBInventario",
+    "\\AppPrueba\\Views",
+    "\\AppPrueba\\Views\\Datos",
+    "\\AppPrueba\\Views\\Home",
+    "\\AppPrueba\\wwwroot"
+  ],
+  "SelectedNode": "\\AppPrueba\\Models\\DBInventario\\InventarioSistemasContext.cs",
+  "PreviewInSolutionExplorer": false
+}

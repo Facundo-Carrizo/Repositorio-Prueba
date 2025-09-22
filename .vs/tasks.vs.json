@@ -1,0 +1,15 @@
+{
+  "tasks": [
+    {
+      "taskLabel": "tarea-AppPrueba",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "tarea-AppPrueba",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ],
+  "version": "0.2.1"
+}
