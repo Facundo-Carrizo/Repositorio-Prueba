@@ -1,0 +1,49 @@
+﻿@model AppPrueba.Models.DBInventario.Hardware
+
+@{
+    ViewData["Title"] = "Editar Hardware";
+}
+
+<h1>Editar Hardware</h1>
+
+<h4>Hardware</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdHardware" />
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="NroSerie" class="control-label"></label>
+                <input asp-for="NroSerie" class="form-control" />
+                <span asp-validation-for="NroSerie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdModelo" class="control-label"></label>
+                <input asp-for="IdModelo" class="form-control" />
+                <span asp-validation-for="IdModelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control" />
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

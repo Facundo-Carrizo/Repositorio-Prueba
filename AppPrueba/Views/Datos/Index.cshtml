@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AppPrueba.Models.DBInventario.Hardware>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de Hardware</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Descripcion</th>
+            <th>Serial</th>
+            <th>Modelo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Descripcion</td>
+                <td>@item.NroSerie</td>
+                <td>@item.IdModelo</td>
+                <td>@item.Estado</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdHardware" class="btn btn-primary btn-sm">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

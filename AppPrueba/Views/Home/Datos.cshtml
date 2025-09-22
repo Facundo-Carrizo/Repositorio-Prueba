@@ -1,0 +1,81 @@
+﻿@model IEnumerable<AppPrueba.Models.DBInventario.Hardware>
+
+@{
+    ViewData["Title"] = "Inventario de Hardware";
+}
+
+<h1 class="mb-4">📋 Listado de Hardware</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">➕ Agregar Nuevo Hardware</a>
+</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.CodigoInventario)</th>
+                <th>Modelo Completo</th>
+                <th>@Html.DisplayNameFor(model => model.NroSerie)</th>
+                <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+                <th>@Html.DisplayNameFor(model => model.Estado)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaAlta)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaBaja)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.CodigoInventario)</td>
+                        
+                        <td>@Html.DisplayFor(modelItem => item.NroSerie)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                        <td>
+                            @{
+                                var estadoClass = item.Estado switch
+                                {
+                                    "Nuevo" => "bg-success text-white",
+                                    "En uso" => "bg-primary text-white",
+                                    "En reparación" => "bg-warning text-dark",
+                                    "Obsoleto" => "bg-secondary text-white",
+                                    _ => "bg-light text-dark"
+                                };
+                            }
+                            <span class="badge @estadoClass rounded-pill px-3 py-2">@item.Estado</span>
+                        </td>
+                        <td>@item.FechaAlta.ToString("dd/MM/yyyy")</td>
+                        <td>@(item.FechaBaja?.ToString("dd/MM/yyyy") ?? "—")</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-action="Details" asp-route-id="@item.IdHardware" class="btn btn-info btn-sm" title="Ver detalles">
+                                    <i class="bi bi-eye"></i> Detalles
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@item.IdHardware" class="btn btn-warning btn-sm" title="Editar">
+                                    <i class="bi bi-pencil"></i> Editar
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.IdHardware" class="btn btn-danger btn-sm" title="Eliminar">
+                                    <i class="bi bi-trash"></i> Eliminar
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="text-center text-muted py-3">
+                        <em>📭 No hay registros de hardware disponibles.</em>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

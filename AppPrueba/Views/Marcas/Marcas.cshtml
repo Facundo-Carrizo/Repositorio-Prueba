@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AppPrueba.Models.DBInventario.Marca>
+
+
+
+
+<h1>Lista</h1>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <td>Nombre de Las Marcas </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+            </tr>
+
+
+        }
+
+    </tbody>
+
+</table>
+
